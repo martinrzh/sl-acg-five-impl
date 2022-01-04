@@ -18,8 +18,8 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  region = "us-east-1"
-  profile = "guru"
+  region = "us-west-1"
+  profile = "indira"
 }
 
 # Create a S3 bucket
@@ -31,7 +31,7 @@ resource "aws_s3_bucket" "samples3bucket" {
     error_document = "index.html"
   }
 }
-
+gitn
 resource "aws_s3_bucket_public_access_block" "public" {
   bucket = aws_s3_bucket.samples3bucket.id
 
