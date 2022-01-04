@@ -31,7 +31,7 @@ resource "aws_s3_bucket" "samples3bucket" {
     error_document = "index.html"
   }
 }
-gitn
+
 resource "aws_s3_bucket_public_access_block" "public" {
   bucket = aws_s3_bucket.samples3bucket.id
 
