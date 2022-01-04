@@ -24,13 +24,14 @@ provider "aws" {
 
 # Create a S3 bucket
 resource "aws_s3_bucket" "samples3bucket" {
-  bucket = "shiuhlin-public-bucket-rzh1101"
+  bucket = "shiuhlin-public-bucket-rzh1113"
   
   website {
     index_document = "index.html"
     error_document = "index.html"
   }
 }
+
 
 resource "aws_s3_bucket_public_access_block" "public" {
   bucket = aws_s3_bucket.samples3bucket.id
@@ -40,6 +41,7 @@ resource "aws_s3_bucket_public_access_block" "public" {
   ignore_public_acls = false
   restrict_public_buckets = false
 }
+
 
 resource "aws_s3_bucket_policy" "public_website" {  
   bucket = aws_s3_bucket.samples3bucket.id   
