@@ -35,8 +35,3 @@ then
   echo "Running destroy"
   terraform destroy -auto-approve > tf_output.txt
 fi
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
