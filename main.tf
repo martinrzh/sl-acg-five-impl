@@ -24,8 +24,8 @@ provider "aws" {
 
 # Create a S3 bucket
 resource "aws_s3_bucket" "samples3bucket" {
+<<<<<<< HEAD
   bucket = "shiuhlin-public-bucket-rzh2113"
-  
   website {
     index_document = "index.html"
     error_document = "index.html"
